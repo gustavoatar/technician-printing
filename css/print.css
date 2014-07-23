@@ -1,7 +1,8 @@
+/* BODY TAG GLOBALS*/
 body {
-	width:100% !important;
-	margin:0 !important;
-	padding:0 !important;
+	width:100%;
+	margin:0;
+	padding:0;
 	line-height: 1.4;
 	background: none;
     -webkit-print-color-adjust:exact;	
@@ -9,45 +10,31 @@ body {
 	font-size: 12pt;
 	font-family: "Open Sans", "Droid Sans", Helvetica, "Helvetica Neue", Arial, sans-serif;
 	color: #43556e;	
+	font-weight: 400;
 }
 
-/* LINKS */
+/* LINK HELPERS - SPIT OUT THE LINK */
 a:link, a:visited {background: transparent; font-weight: 700; text-decoration: underline;color:#31a4ca;}
 a[href^="http://"]:link:after, a[href^="http://"]:visited:after {content: " (" attr(href) ") "; font-size: 90%;}
 a[href^="http://"] {color:#31a4ca;}
-
-/* TABLES */
-
-tr {page-break-inside: avoid;}
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+	content: "";
+}
 
 /* HIDE UNNECESSARY ELEMENTS */
-#header, #footer, #navigation, #sidebar {display:none;}
 * {
 	background: transparent !important;
 	box-shadow: none !important;
 	text-shadow: none !important;
 }
 
+/* SPIT OUT THE ABBR */
 abbr[title]:after {
 	content: " (" attr(title) ")";
 }
 
-/*
- * Don't show links that are fragment identifiers,
- * or use the `javascript:` pseudo protocol
- */
-
-a[href^="#"]:after,
-a[href^="javascript:"]:after {
-	content: "";
-}
-
-pre,
-blockquote {
-	border: 1px solid #999;
-	page-break-inside: avoid;
-}
-
+/* SET DEFAULT BLOCK LEVEL FORMAT ON HTML5 TAGS */
 article,
 aside,
 details,
@@ -63,15 +50,12 @@ summary {
     display: block;
 }
 
-header h1 { margin-top: -.15cm; }
-
-/* Page Sizes */
-
-@page {
-	size: auto;   
+/* PAGE MARGINS */
+@page {  
 	margin: 1.27cm .9525cm 1.27cm .9525cm; 
 }
 
+/* PAGE WRAPPERS AND UTILITIES */
 .print {
 	display: table;
 	position: relative;
@@ -86,14 +70,6 @@ header h1 { margin-top: -.15cm; }
 
 .pull-right {
 	float: right;
-}
-
-article h3 { 
-	border-top: 1px solid #97999a; 
-	border-bottom: 1px solid #97999a;
-	text-align: center;
-	padding: .15cm 0;
-	font-weight: 600;
 }
 
 article {
@@ -118,7 +94,7 @@ article {
 }
 
 
-/* HEADINGS */
+/* TYPOGRAPHY*/
 h1{font-size:19pt;}
 h2{font-size:17pt;}
 h3{font-size:15pt;}
@@ -132,8 +108,23 @@ h1,h2,h3,h4 {
 	page-break-before: avoid;
 }
 
+
+header h1 { margin-top: -.15cm; }
+
+article h3 { 
+	border-top: 1px solid #97999a; 
+	border-bottom: 1px solid #97999a;
+	text-align: center;
+	padding: .15cm 0;
+	font-weight: 600;
+}
+
 h1 strong {
 	font-weight: 700;
+}
+
+p {
+	margin: .075cm 0;
 }
 
 p,
@@ -148,6 +139,8 @@ h3 {
 	page-break-after: avoid;
 }
 
+
+/* LIST ITEMS */
 ol {
   margin: 0 0 1.5em;
   padding: 0;
@@ -186,6 +179,9 @@ ol ol > li:before {
 	content: counter(item,lower-alpha) ".";
 }
 
+/* TABLES */
+tr {page-break-inside: avoid;}
+
 table {
 	padding: 0;
 	margin: 0 auto;
@@ -195,6 +191,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0px;
 	border-color: #43556e;	
+}
+
+sup {
+	color: #31a4ca;
+	font-weight: 600;
 }
 
 thead {
@@ -242,7 +243,23 @@ tbody tr:nth-child(even) {
 	background-color: #dddddd !important;
 }
 
+tfoot tr {
+	text-align: left;
+	font-size: 11pt;
+	border: 1px solid  #43556e !important;	
+}
 
+tfoot span {
+	color: #31a4ca;
+	font-weight: 600;
+	padding-left: .05cm;
+}
+
+tfoot p {
+	padding-left: .2cm;
+}
+
+/* FOOTER */
 footer {
 	border-top: 1px solid #97999a;
 	padding-top: .4cm;	
@@ -251,6 +268,7 @@ footer {
 	display: table-footer-group;
 	width: 100%;
 	min-width: 100% !important;
+	background: #fff !important;
 }
 
 footer small {
@@ -264,6 +282,7 @@ footer img {
 	float: right;
 }
 
+/* IMAGES */
 img {
 	border: 2px solid #97999a;
 	page-break-inside: avoid;
@@ -274,6 +293,7 @@ img {
 	max-width: 100%;
 }
 
+/* CAPTIONS */
 figcaption, img {
 	text-align: center;
 }
