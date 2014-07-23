@@ -68,13 +68,9 @@ header h1 { margin-top: -.15cm; }
 /* Page Sizes */
 
 @page {
-	size: auto;   /* auto is the initial value */
-	margin: 1.27cm .9525cm 1.27cm .9525cm;  /* this affects the margin in the printer settings */
+	size: auto;   
+	margin: 1.27cm .9525cm 1.27cm .9525cm; 
 }
-
-@page { size : portrait }
-
-@page rotated { size : landscape }
 
 .print {
 	display: table;
@@ -270,6 +266,8 @@ footer img {
 
 img {
 	border: 2px solid #97999a;
+	page-break-inside: avoid;
+	page-break-before: avoid;
 	page-break-after: avoid;
 	margin: .75cm auto .75cm auto;
 	display: block;
