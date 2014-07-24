@@ -5,8 +5,8 @@ body {
 	padding:0;
 	line-height: 1.4;
 	background: none;
-    -webkit-print-color-adjust:exact;	
-	print-color-adjust:exact;
+    -webkit-print-color-adjust:exact !important;	
+	print-color-adjust:exact !important;
 	font-size: 12pt;
 	font-family: "Open Sans", "Droid Sans", Helvetica, "Helvetica Neue", Arial, sans-serif;
 	color: #43556e;	
@@ -180,7 +180,6 @@ ol ol > li:before {
 }
 
 /* TABLES */
-tr {page-break-inside: avoid;}
 
 table {
 	padding: 0;
@@ -191,6 +190,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0px;
 	border-color: #43556e;	
+}
+
+table p {
+	color: #556b83;	
 }
 
 sup {
@@ -207,6 +210,8 @@ thead h5{
 	margin: .2cm 0;
 	font-weight: 600;
 }
+
+tr {page-break-inside: avoid;}
 
 thead tr:first-child {
 	border: 1px solid  #43556e !important;
@@ -240,6 +245,8 @@ tbody tr td:last-child {
 
 
 tbody tr:nth-child(even) {
+    -webkit-print-color-adjust:exact !important;	
+	print-color-adjust:exact !important;	
 	background-color: #dddddd !important;
 }
 
