@@ -86,6 +86,9 @@ article {
 .graphic {
 	margin: 0 auto;
 	width: 90%;
+	page-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-after: avoid;	
 }
 
 .table { 
@@ -245,6 +248,11 @@ tbody tr td:last-child {
 	border-right: 0px;
 }
 
+@media screen and (min-width:0\0) {
+	tbody tr:nth-child(even) {
+		border-bottom: 1px solid #97999a;
+	}
+} 
 
 tbody tr:nth-child(even) {
     -webkit-print-color-adjust:exact !important;	
@@ -297,7 +305,7 @@ img {
 	page-break-inside: avoid;
 	page-break-before: avoid;
 	page-break-after: avoid;
-	margin: .75cm auto .75cm auto;
+	margin: .75cm auto .25cm auto;
 	display: block;
 	max-width: 100%;
 }
@@ -308,5 +316,6 @@ figcaption, img {
 }
 
 figcaption {
-	margin: 0 0 .2cm 0;
+	margin: 0 0 .1cm 0;
+	font-size: 12pt;
 }
