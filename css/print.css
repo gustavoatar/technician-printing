@@ -320,12 +320,23 @@ img {
 	page-break-after: avoid;	
 	display: block;
 	position: relative;
+	width: 1004px;
+	max-width: 1004px;	
+	height: 1004px;	
+	max-height: 1004px;
+}
+
+.zoomed div {
+	overflow: hidden;
+	page-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-after: avoid;	
+	display: block;
 	width: 1000px;
-	height: 1000px;
+	height: 9600px;
 	max-width: 1000px;
-	max-height: 1000px;	
-	border: 2px solid #97999a;	
-	border-bottom: 2px solid #97999a;
+	max-height: 960px;
+	border: 2px solid #97999a;				
 }
 
 /* This is for demo */
@@ -337,7 +348,7 @@ img {
 	page-break-inside: avoid;
 	page-break-before: avoid;
 	page-break-after: avoid;
-	border: 0px;	
+	border: 0px;
 }
 
 /* CAPTIONS */
@@ -345,12 +356,15 @@ figcaption, img {
 	text-align: center;
 }
 
-.zoomed figcaption {
-	margin-top: -780px;
-}
-
 figcaption {
 	margin: 0 0 .1cm 0;
 	z-index: 9999;
 	font-size: 12pt;
+}
+
+.zoomed figcaption {
+	padding: .5cm 0 0 0;
+	border-top: 2px solid #97999a;	
+	border-collapse: collapse;
+
 }
