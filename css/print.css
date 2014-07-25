@@ -3,7 +3,7 @@ body {
 	width:100%;
 	margin:0;
 	padding:0;
-	line-height: 1.4;
+	line-height: 1.2;
 	background: none;
     -webkit-print-color-adjust:exact !important;	
 	print-color-adjust:exact !important;
@@ -81,14 +81,6 @@ article {
 .procedure { 
 	margin: 0 auto;
 	width: 68%;
-}
-
-.graphic {
-	margin: 0 auto;
-	width: 90%;
-	page-break-inside: avoid;
-	page-break-before: avoid;
-	page-break-after: avoid;	
 }
 
 .table { 
@@ -248,19 +240,20 @@ tbody tr td:last-child {
 	border-right: 0px;
 }
 
-@media print and (min-width:0\0) {
-	tbody tr:nth-child(even) {
-		border-collapse: collapse;
-		border-bottom: 1px solid #97999a;
-		background-color: transparent !important;
-	}
-} 
-
 tbody tr:nth-child(even) {
     -webkit-print-color-adjust:exact !important;	
 	print-color-adjust:exact !important;	
 	background-color: #dddddd !important;
 }
+
+@media all (min-width:0\0) {
+	tbody tr:nth-child(even) {
+		border-collapse: collapse;
+		border-bottom: 1px solid #97999a;
+		background-color: none !important;
+	}
+} 
+
 
 tfoot tr {
 	text-align: left;
@@ -303,13 +296,48 @@ footer img {
 
 /* IMAGES */
 img {
-	border: 2px solid #97999a;
 	page-break-inside: avoid;
 	page-break-before: avoid;
 	page-break-after: avoid;
 	margin: .75cm auto .25cm auto;
 	display: block;
 	max-width: 100%;
+	border: 2px solid #97999a;			
+}
+
+.graphic {
+	margin: 0 auto;
+	width: 90%;
+	page-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-after: avoid;	
+}
+
+.zoomed {
+	overflow: hidden;
+	page-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-after: avoid;	
+	display: block;
+	position: relative;
+	width: 1000px;
+	height: 1000px;
+	max-width: 1000px;
+	max-height: 1000px;	
+	border: 2px solid #97999a;	
+	border-bottom: 2px solid #97999a;
+}
+
+/* This is for demo */
+.zoomed img {
+	width: 1800px;
+	height: 1724px;
+	max-width: 1800px;	
+	max-height: 1724px;	
+	page-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-after: avoid;
+	border: 0px;	
 }
 
 /* CAPTIONS */
@@ -317,7 +345,12 @@ figcaption, img {
 	text-align: center;
 }
 
+.zoomed figcaption {
+	margin-top: -780px;
+}
+
 figcaption {
 	margin: 0 0 .1cm 0;
+	z-index: 9999;
 	font-size: 12pt;
 }
