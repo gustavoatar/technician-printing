@@ -248,9 +248,11 @@ tbody tr td:last-child {
 	border-right: 0px;
 }
 
-@media screen and (min-width:0\0) {
+@media print and (min-width:0\0) {
 	tbody tr:nth-child(even) {
+		border-collapse: collapse;
 		border-bottom: 1px solid #97999a;
+		background-color: transparent !important;
 	}
 } 
 
