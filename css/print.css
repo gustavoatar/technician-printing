@@ -313,6 +313,11 @@ img {
 	page-break-after: avoid;	
 }
 
+.graphic.zoomed {
+	width: 100%;
+	margin: 0;
+}
+
 .zoomed {
 	overflow: hidden;
 	page-break-inside: avoid;
