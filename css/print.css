@@ -247,9 +247,9 @@ tbody tr:nth-child(even) {
 }
 
 @media all (min-width:0\0) {
-	tbody tr:nth-child(even) {
-		border-collapse: collapse;
-		border-bottom: 1px solid #97999a;
+	html[data-useragent*='MSIE 10.0'] table tbody tr:nth-child(even) {
+		border-collapse: collapse !important;
+		border-bottom: 1px solid #97999a !important;
 		background-color: none !important;
 	}
 } 
