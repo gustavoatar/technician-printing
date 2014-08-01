@@ -89,6 +89,10 @@ article {
 	page-break-inside: avoid;
 }
 
+.procedure.table-steps .table {
+	page-break-before: always;	
+}
+
 
 /* TYPOGRAPHY*/
 h1{font-size:19pt;}
