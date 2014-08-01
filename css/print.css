@@ -3,7 +3,7 @@ body {
 	width:100%;
 	margin:0;
 	padding:0;
-	line-height: 1.2;
+	line-height: 1.3em;
 	background: none;
     -webkit-print-color-adjust:exact !important;	
 	print-color-adjust:exact !important;
@@ -80,7 +80,7 @@ article {
 
 .procedure { 
 	margin: 0 auto;
-	width: 68%;
+	width: 78%;
 }
 
 .table { 
@@ -92,7 +92,7 @@ article {
 /* TYPOGRAPHY*/
 h1{font-size:19pt;}
 h2{font-size:17pt;}
-h3{font-size:15pt;}
+h3{font-size:14pt;}
 h4{font-size:13pt;}
 h5{font-size:12pt;}
 h6{font-size:11pt;}
@@ -103,14 +103,18 @@ h1,h2,h3,h4 {
 	page-break-before: avoid;
 }
 
+h4 {
+	margin: .5cm 0 .1cm 0;
+}
 
-header h1 { margin-top: -.15cm; }
+
+header h1 { margin-top: 0; }
 
 article h3 { 
 	border-top: 1px solid #97999a; 
 	border-bottom: 1px solid #97999a;
 	text-align: center;
-	padding: .15cm 0;
+	padding: .15cm 2cm;
 	font-weight: 600;
 }
 
@@ -120,6 +124,7 @@ h1 strong {
 
 p {
 	margin: .075cm 0;
+	padding: .3cm 0;
 }
 
 p,
@@ -188,7 +193,9 @@ table {
 }
 
 table p {
-	color: #556b83;	
+	color: #556b83;
+	margin: 0;
+	padding: .1cm 0;	
 }
 
 sup {
@@ -243,17 +250,8 @@ tbody tr td:last-child {
 tbody tr:nth-child(even) {
     -webkit-print-color-adjust:exact !important;	
 	print-color-adjust:exact !important;	
-	background-color: #dddddd !important;
+	background-color: #e0e0e0 !important;
 }
-
-@media all (min-width:0\0) {
-	html[data-useragent*='MSIE 10.0'] table tbody tr:nth-child(even) {
-		border-collapse: collapse !important;
-		border-bottom: 1px solid #97999a !important;
-		background-color: none !important;
-	}
-} 
-
 
 tfoot tr {
 	text-align: left;
@@ -292,6 +290,8 @@ footer img {
 	margin: 0;
 	border: 0;
 	float: right;
+	width: 135px;
+	height: 16px;
 }
 
 /* IMAGES */
