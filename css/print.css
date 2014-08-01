@@ -301,7 +301,7 @@ img {
 	page-break-inside: avoid;
 	page-break-before: avoid;
 	page-break-after: avoid;
-	margin: .75cm auto .25cm auto;
+	margin: .50cm auto .25cm auto;
 	display: block;
 	max-width: 100%;
 	border: 2px solid #97999a;			
