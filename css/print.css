@@ -321,6 +321,9 @@ img {
 .graphic.zoomed {
 	width: 100%;
 	margin: 0;
+	page-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-after: avoid;		
 }
 
 .zoomed {
@@ -330,10 +333,10 @@ img {
 	page-break-after: avoid;	
 	display: block;
 	position: relative;
-	width: 1004px;
-	max-width: 1004px;	
-	height: 1004px;	
-	max-height: 1004px;
+	width: 994px;
+	max-width: 994px;	
+	height: 994px;	
+	max-height: 994px;
 }
 
 .zoomed div {
@@ -343,9 +346,9 @@ img {
 	page-break-after: avoid;	
 	display: block;
 	width: 1000px;
-	height: 960px;
+	height: 940px;
 	max-width: 1000px;
-	max-height: 960px;
+	max-height: 940px;
 	border: 2px solid #97999a;				
 }
 
@@ -370,6 +373,9 @@ figcaption {
 	margin: 0 0 .1cm 0;
 	z-index: 9999;
 	font-size: 12pt;
+	page-break-inside: avoid;
+	page-break-before: avoid;
+	page-break-after: avoid;		
 }
 
 .zoomed figcaption {
